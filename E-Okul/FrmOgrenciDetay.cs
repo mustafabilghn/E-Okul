@@ -19,7 +19,7 @@ namespace E_Okul
         }
 
         public string numara;
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-AOEQHQU;Initial Catalog=DbNotKayit;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-JQ02U7VO;Initial Catalog=DbNotKayit;Integrated Security=True");
 
         private void FrmOgrenciDetay_Load(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace E_Okul
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
             {
-                LblAdsoyad.Text = dr[2].ToString() + " " + dr[3].ToString();
+                LblAdsoyad.Text = dr[2] + " " + dr[3];
                 LblSinav1.Text = dr[4].ToString();
                 LblSinav2.Text = dr[5].ToString();
                 LblSinav3.Text = dr[6].ToString();

@@ -18,9 +18,8 @@ namespace E_Okul
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-AOEQHQU;Initial Catalog=DbNotKayit;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-JQ02U7VO;Initial Catalog=DbNotKayit;Integrated Security=True");
 
-        
 
         private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
         {
@@ -62,10 +61,10 @@ namespace E_Okul
             TxtSoyad.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
             LblOrtalama.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
         }
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             string durum;
             double ortalama, s1, s2, s3;
             s1 = Convert.ToDouble(TxtSinav1.Text);
@@ -77,14 +76,14 @@ namespace E_Okul
             if (ortalama >= 50)
             {
                 durum = "True";
-                
+
             }
             else
             {
                 durum = "False";
-                
+
             }
-            
+
             baglanti.Open();
             SqlCommand komut = new SqlCommand("Update Tbl_Ders set OgrS1 = @p1,OgrS2 = @p2,OgrS3 = @p3,Ortalama = @p4,Durum = @p5 where OgrNumara = @p6", baglanti);
             komut.Parameters.AddWithValue("@p1", TxtSinav1.Text);
@@ -97,12 +96,11 @@ namespace E_Okul
             baglanti.Close();
             MessageBox.Show("Öğrenci notları güncellendi.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.tbl_DersTableAdapter.Fill(this.dbNotKayitDataSet.Tbl_Ders);
-           
+
 
         }
         private void FrmOgretmenDetay_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dbNotKayitDataSet.Tbl_Ders' table. You can move, or remove it, as needed.
 
             this.tbl_DersTableAdapter.Fill(this.dbNotKayitDataSet.Tbl_Ders);
 
