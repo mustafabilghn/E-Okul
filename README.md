@@ -2,6 +2,11 @@
 
 This is a simple **student information system** developed using **C# and Windows Forms**, inspired by the "E-Okul" system. It allows teachers to manage student grades and students to view their academic performance through a user-friendly desktop interface.
 
+## 📸 Images
+![LoginPage](screenshots/Login.png)
+![TeacherPage](screenshots/Teacher.png)
+![StudentPage](Student.png)
+
 ## 🚀 Features
 
 - 👨‍🏫 **Teacher Panel**
