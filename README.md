@@ -5,7 +5,7 @@ This is a simple **student information system** developed using **C# and Windows
 ## 📸 Images
 ![LoginPage](screenshots/Login.png)
 ![TeacherPage](screenshots/Teacher.png)
-![StudentPage](Student.png)
+![StudentPage](screenshots/Student.png)
 
 ## 🚀 Features
 
